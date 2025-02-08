@@ -1,0 +1,12 @@
+.btn{
+    font-size: 17px;
+    line-height: 26px;
+    text-transform: uppercase;
+    background-color: #306585;
+    border-radius: 10px;
+  }
+  
+  .btn-primary{
+    background-color: #306585;
+    border-radius: 10px;
+  }
