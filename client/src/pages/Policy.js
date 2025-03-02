@@ -15,7 +15,7 @@ const Policy = () => {
         <div className="col-md-6">
           <h2 className="mb-4">Privacy Policy</h2>
           <p>
-            At IGNITION ALLEY, we are committed to protecting the privacy and
+            At TITAN REV, we are committed to protecting the privacy and
             security of your personal information. This Privacy Policy explains
             how we collect, use, disclose, and safeguard your information when
             you use our website or services.
