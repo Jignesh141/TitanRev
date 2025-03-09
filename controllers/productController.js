@@ -345,33 +345,22 @@ export const braintreeTokenController = async (req, res) => {
 //payment
 export const brainTreePaymentController = async (req, res) => {
   try {
-    const { nonce, cart } = req.body;
+    const { cart } = req.body; // Removed nonce since we're not processing payments
     let total = 0;
     cart.map((i) => {
       total += i.price;
     });
-    let newTransaction = gateway.transaction.sale(
-      {
-        amount: total,
-        paymentMethodNonce: nonce,
-        options: {
-          submitForSettlement: true,
-        },
-      },
-      function (error, result) {
-        if (result) {
-          const order = new orderModel({
-            products: cart,
-            payment: result,
-            buyer: req.user._id,
-          }).save();
-          res.json({ ok: true });
-        } else {
-          res.status(500).send(error);
-        }
-      }
-    );
+
+    // Creating an order without processing payment
+    const order = await new orderModel({
+      products: cart,
+      payment: { status: "Not Required", amount: total }, // Dummy payment status
+      buyer: req.user._id,
+    }).save();
+
+    res.json({ ok: true, message: "Order placed successfully without payment", order });
   } catch (error) {
     console.log(error);
+    res.status(500).json({ error: "Order placement failed" });
   }
 };
