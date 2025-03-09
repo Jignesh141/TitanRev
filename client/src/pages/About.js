@@ -3,7 +3,7 @@ import Layout from "./../components/Layout/Layout";
 
 const About = () => {
   return (
-    <Layout title={"About Us - IGNITION ALLEY"}>
+    <Layout title={"About Us - TITAN REV"}>
       <div className="row contactus">
         <div className="col-md-6">
           <img
@@ -13,9 +13,9 @@ const About = () => {
           />
         </div>
         <div className="col-md-6">
-          <h2 className="mb-3">Welcome to IGNITION ALLEY</h2>
+          <h2 className="mb-3">Welcome to TITAN REV</h2>
           <p className="text-justify">
-            At IGNITION ALLEY, we are passionate about cars and providing
+            At TITAN REV, we are passionate about cars and providing
             exceptional automotive solutions to our customers. Whether you're
             looking for a new ride or need expert services for your vehicle,
             we've got you covered.
@@ -28,9 +28,9 @@ const About = () => {
             enthusiast.
           </p>
           <p className="text-justify">
-            Beyond vehicles, IGNITION ALLEY is committed to fostering a
+            Beyond vehicles, TITAN REV is committed to fostering a
             community centered around automotive excellence. Join us on this
-            journey and experience the thrill of the road with IGNITION ALLEY.
+            journey and experience the thrill of the road with TITAN REV.
           </p>
         </div>
       </div>

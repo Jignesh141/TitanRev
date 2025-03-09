@@ -111,7 +111,7 @@ const HomePage = () => {
     }
   };
   return (
-    <Layout title={"IGNITION ALLEY"}>
+    <Layout title={"TITAN REV"}>
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">
         <div className="col-md-3 filters">
@@ -152,7 +152,7 @@ const HomePage = () => {
                     <h5 className="card-title card-price">
                       {p.price.toLocaleString("en-IN", {
                         style: "currency",
-                        currency: "INR",
+                        currency: "USD",
                       })}
                     </h5>
                   </div>
